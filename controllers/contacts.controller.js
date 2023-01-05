@@ -20,9 +20,6 @@ async function getContact(req, res, next) {
     return next(
       HttpError(404, `Contact with id=${req.params.contactId} is not found!`)
     );
-    // return res.status(404).json({
-    //   message: `Contact with id=${req.params.contactId} is not found!`,
-    // });
   }
 
   return res.json(contact);
@@ -45,9 +42,6 @@ async function deleteContact(req, res, next) {
   return next(
     HttpError(404, `Contact with id=${req.params.contactId} is not found!`)
   );
-  // res
-  //   .status(404)
-  //   .json({ message: `Contact with id=${req.params.contactId} not found!` });
 }
 
 async function changeContact(req, res, next) {
@@ -57,9 +51,6 @@ async function changeContact(req, res, next) {
   return next(
     HttpError(404, `Contact with id=${req.params.contactId} is not found!`)
   );
-  // return res
-  //   .status(404)
-  //   .json({ message: `Contact with id=${req.params.contactId} not found!` });
 }
 
 module.exports = {
